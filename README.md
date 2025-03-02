@@ -99,8 +99,9 @@ sudo ./run_both_scripts.sh
 
 📌 **O que esse script faz?**
 
-1. Inicia a varredura da rede (mac_identify).
-1. Captura pacotes Wi-Fi (captura).
+1. Realiza instalação das dependências (bibliotecas) utilizadas no sistema;
+1. Inicia a varredura da rede (mac_identify);
+1. Captura pacotes Wi-Fi (captura);
 1. Processa os sinais CSI e exibe os batimentos cardíacos (CSI_bpm).
 
 🔍 _Observação: O uso de sudo é necessário para acessar a interface de rede Wi-Fi._
