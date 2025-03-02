@@ -234,19 +234,19 @@ def heart_beat_filtering(n, xf, yf, highfreq, lowfreq, limiar, timestamp, sequen
 
 
 
-	plot_frequencies_comparison(
-		[fa[0] for fa in frequencias_amplitudes],  # Frequências originais [Só intervalo correto]
-    	[fa[1] for fa in frequencias_amplitudes],
-		[f[0] for f in frequencias_amplitudes_filtradas],  # Frequências filtradas
-		[f[1] for f in frequencias_amplitudes_filtradas],
-		top_frequencies,
-		top_amplitudes,
-		upper_limit,
-		mean_value=mean_amp,
-		time=timestamp,
-		sequence=sequence
+	# plot_frequencies_comparison(
+	# 	[fa[0] for fa in frequencias_amplitudes],  # Frequências originais [Só intervalo correto]
+    # 	[fa[1] for fa in frequencias_amplitudes],
+	# 	[f[0] for f in frequencias_amplitudes_filtradas],  # Frequências filtradas
+	# 	[f[1] for f in frequencias_amplitudes_filtradas],
+	# 	top_frequencies,
+	# 	top_amplitudes,
+	# 	upper_limit,
+	# 	mean_value=mean_amp,
+	# 	time=timestamp,
+	# 	sequence=sequence
 
-	)
+	# )
 
 	# Calcular a média das frequências selecionadas
 	if len(top_frequencies) > 0:

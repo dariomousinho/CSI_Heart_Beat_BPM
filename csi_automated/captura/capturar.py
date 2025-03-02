@@ -8,6 +8,8 @@ from mac import WifiMacScanner
 class CaptureWifiPcaps:
 
     def __init__(self):
+        path = "captura/Scan"  # Caminho dos scans
+
         scanner = WifiMacScanner()
         networks_rank = scanner.show_by_signal()  # Classificar pela intensidade do sinal
         # Encontrar a rede com maior sinal e frequência de 5.0 GHz
@@ -28,6 +30,12 @@ class CaptureWifiPcaps:
                 
                 print(f"SSID: {network['SSID']}, Endereço: {network['Address']}, Sinal: {signal} dBm, Canal: {channel}, Frequência: {network['Frequency']}, Largura de Banda: {bandwidth}")
         
+        print("\n")
+        print("Apagando arquivos de captura antigos...")
+        # Excluir arquivos antigos dentro do /Scan
+        for file in os.listdir(path):
+            os.remove(os.path.join(path, file))
+
         print("\nRede Wi-Fi mais forte:")
         if strongest_network:
             print(f"SSID: {strongest_network.get('SSID', 'N/A')}, Endereço: {strongest_network.get('Address', 'N/A')}, Sinal: {strongest_network.get('Signal', 'N/A')} dBm, Canal: {strongest_network.get('Channel', 'N/A')}, Frequência: {strongest_network.get('Frequency', 'N/A')}, Largura de Banda: {strongest_network.get('Bandwidth', 'N/A')}")

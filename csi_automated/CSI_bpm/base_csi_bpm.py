@@ -36,9 +36,7 @@ def get_sampling_rate(pcap_file, sampling_rates_df):
 def process_files(interface):
     path = "../captura/Scan"  # Caminho dos scans
 
-    # Excluir arquivos antigos dentro do /Scan
-    for file in os.listdir(path):
-        os.remove(os.path.join(path, file))
+    
 
     #Excluir texto no bmp_time.csv
     with open('bpm_time.csv', 'w') as f:
