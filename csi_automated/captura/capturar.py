@@ -8,7 +8,7 @@ from mac import WifiMacScanner
 class CaptureWifiPcaps:
 
     def __init__(self):
-        path = "captura/Scan"  # Caminho dos scans
+        path = "Scan"  # Caminho dos scans
 
         scanner = WifiMacScanner()
         networks_rank = scanner.show_by_signal()  # Classificar pela intensidade do sinal
